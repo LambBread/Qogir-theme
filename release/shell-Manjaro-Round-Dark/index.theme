@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=shell-Manjaro-Round-Dark
+Comment=An Clean Gtk+ theme based on Flat Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=shell-Manjaro-Round-Dark
+MetacityTheme=shell-Manjaro-Round-Dark
+IconTheme=shell-Manjaro-Dark
+CursorTheme=shell-Manjaro-Dark
+ButtonLayout=menu:minimize,maximize,close
