@@ -37,5 +37,5 @@ Clear_theme() {
 }
 
 cd .. && ./install.sh -d $THEME_DIR -t all && ./install.sh -d $THEME_DIR -t all --tweaks round
-cd $THEME_DIR && Tar_themes && Clear_theme
+# cd $THEME_DIR && Tar_themes && Clear_theme
 

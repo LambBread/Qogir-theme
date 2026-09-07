@@ -1,2 +1,5 @@
 release/*.tar.xz
+release/Qogir*/
+release/shell*/
+result/
 src/_sass/_tweaks-temp.scss
