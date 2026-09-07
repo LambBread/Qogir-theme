@@ -14,7 +14,6 @@
                     l_white ? "#ece3d5",
                 }:
 
-                # TODO: add dynamic color support
 
                 nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ] (
                     system:
@@ -23,7 +22,7 @@
                     in
                     pkgs.stdenv.mkDerivation {
                         pname = "qogir-theme-fork";
-                        version = "2026-09-06";
+                        version = "2026-09-07";
                         src = ./.;
 
                         nativeBuildInputs = [
@@ -32,11 +31,16 @@
                         ];
 
                         propagatedBuildInputs = [
-                            pkgs.gtk_engines
                             pkgs.gtk-engine-murrine
                         ];
 
                         buildPhase = ''
+                            sed -i "s/#412853/${black}/g" ./src/_sass/_colors.scss
+                            sed -i "s/#f08533/${red}/g" ./src/_sass/_colors.scss
+                            sed -i "s/#9768b6/${magenta}/g" ./src/_sass/_colors.scss
+                            sed -i "s/#d07271/${l_red}/g" ./src/_sass/_colors.scss
+                            sed -i "s/#9fd356/${l_green}/g" ./src/_sass/_colors.scss
+                            sed -i "s/#ece3d5/${l_white}/g" ./src/_sass/_colors.scss
                             patchShebangs .
                             ./parse-sass.sh
                             cd release
@@ -60,7 +64,7 @@
             lib.mkTheme = mkTheme;
 
             packages = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ] (system: {
-                default = (mkTheme { }).${system};
+                default = (mkTheme {}).${system};
             });
         };
 }
