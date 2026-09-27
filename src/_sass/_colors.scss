@@ -28,12 +28,12 @@ $sec_selected_fg_color: rgba($selected_fg_color, 0.6);
 
 $selection_mode_bg: if($trans == 'true', rgba($selected_bg_color, 0.95), $selected_bg_color);
 $selection_mode_fg: $selected_fg_color;
-$warning_color: #F08533;
-$error_color: #d07271;
+$warning_color: #d07271;
+$error_color: #f08533;
 $warning_fg_color: #ece3d5;
 $error_fg_color: #ece3d5;
 $success_color: #9fd356;
-$destructive_color: #ff0000;
+$destructive_color: #f08533;
 $suggested_color: $selected_bg_color;
 $destructive_fg_color: #ece3d5;
 $suggested_fg_color: #ece3d5;

@@ -1,5 +1,5 @@
 {
-    inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     outputs =
         { self, nixpkgs }:
@@ -22,7 +22,7 @@
                     in
                     pkgs.stdenv.mkDerivation {
                         pname = "qogir-theme-fork";
-                        version = "2026-09-07";
+                        version = "2026-09-27";
                         src = ./.;
 
                         nativeBuildInputs = [
